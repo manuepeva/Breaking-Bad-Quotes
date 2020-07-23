@@ -10,13 +10,18 @@ module.exports = {
         filename: 'app.bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js?$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['env']
+                test: /\.js|jsx?$/,
+                include: [
+                    path.resolve(__dirname, "src/app.js")
+                ],
+                exclude: [
+                    path.resolve(__dirname, "node_modules/")
+                ],
+                loader: "babel-loader",
+                options: {
+                    presets: ["@babel/env"]
                 }
             }
         ]

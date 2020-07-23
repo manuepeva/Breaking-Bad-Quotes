@@ -1,5 +1,5 @@
 import { person, sayHello } from './lib';
-
+import '@babel/polyfill';
 async function getPost() {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
 

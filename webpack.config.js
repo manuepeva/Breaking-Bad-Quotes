@@ -19,7 +19,7 @@ module.exports = {
                 exclude: [
                     path.resolve(__dirname, "node_modules/")
                 ],
-                loader: "babel-loader",
+                loader: 'babel-loader',
                 options: {
                     presets: ["@babel/env"]
                 }
